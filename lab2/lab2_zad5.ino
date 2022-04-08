@@ -1,3 +1,6 @@
+//Napisać program, który będzie świecił diodą tylko w momencie, kiedy będzie przyciśnięty
+//przycisk. Wykorzystać EXTI
+
 #include <PinChangeInterrupt.h>
 
 int led1 = 13;
