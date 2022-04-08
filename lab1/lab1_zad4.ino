@@ -1,3 +1,9 @@
+//Należy napisać program, który będzie zmieniał stan LED na przeciwny za każdym razem,
+//gdy przycisk zostanie puszczony. Dodatkowo drugi LED ma migać co 2s. Wykorzystać EXTI
+//i przerwania timera.
+
+
+
 
 #include <PinChangeInterruptSettings.h>
 #include <PinChangeInterruptPins.h>
