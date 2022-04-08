@@ -1,3 +1,7 @@
+//Należy napisać program, który będzie zliczał liczbę naciśnięć przycisku (od 0 do 4) na 4 
+//LEDach. W przypadku doliczenia do końca zakresu, LEDowy licznik ma się wyzerować.
+
+
 int led1 = 13;
 int led2 = 12;
 int led3 = 11;
