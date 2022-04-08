@@ -4,10 +4,7 @@
 
 
 
-#include <PinChangeInterruptSettings.h>
-#include <PinChangeInterruptPins.h>
-#include <PinChangeInterruptBoards.h>
-#include <PinChangeInterrupt.h>
+
 int led1 = 13;
 int led2 = 12;
 
