@@ -1,3 +1,9 @@
+//Napisać program, który po wciśnięciu przycisku co 200ms zacznie zapalać diody. Jeśli
+//przycisk zostanie przyciśnięty na czas mniejszy niż 200ms powinna palić się jedna dioda. Jeśli
+//czas będzie większy od 200ms, ale mniejszy od 400ms zapalone mają być dwie diody itd.
+//Wykorzystać EXTI i przerwania timera.
+
+
 
 #include <TimerOne.h>
 #include <PinChangeInterruptSettings.h>
