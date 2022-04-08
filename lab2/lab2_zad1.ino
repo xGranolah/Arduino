@@ -1,3 +1,6 @@
+//Napisać program migający LED co 500ms. Do opóźnienia zastosować timer.
+
+
 #include <TimerOne.h>
 
 int led1 = 13;
