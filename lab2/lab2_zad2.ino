@@ -1,3 +1,7 @@
+//Napisać program zapalający 4 diody na 200ms co 1000ms. Do opóźnienia zastosować
+//timer.
+
+
 #include <TimerOne.h>
 
 int led1 = 13;
