@@ -1,3 +1,8 @@
+//Należy napisać program, który będzie mrugał 4 LEDami, a częstotliwość ich mrugania 
+//będzie można zmieniać za pomocą przycisku. Wybrać 4 dowolne, różne, zauważalne 
+//częstotliwości.
+
+
 int led1 = 13;
 int led2 = 12;
 int led3 = 11;
