@@ -7,6 +7,7 @@ int led5 = 5;
 int led6 = 3;
 
 int S1 = 2;
+int pot = A5;
 
 int C1 = 0;
 int y = 0;
@@ -16,7 +17,8 @@ int y3 = 0;
 int y4 = 0;
 int y5 = 0;
 
-double predkosc = 0.25;
+double predkosc = 0.02;
+int poziom = 255; //poziom światła max 255
 
 unsigned long czas = 0;
 unsigned long czas1 = 0;
@@ -31,6 +33,7 @@ void setup()
 	pinMode(led4, OUTPUT);
 	pinMode(led5, OUTPUT);
 	pinMode(led6, OUTPUT);
+	pinMode(pot, INPUT);
 
 	pinMode(S1, INPUT);
 
@@ -45,18 +48,20 @@ void sinT()
 	{
 		C1++;
 		czas1 = czas;
-		
+
 	}
 }
 
 void blinksin()
 {
-	y = 255 * sin(predkosc * C1);
-	y1 = 255 * sin(predkosc * C1 - 1);
-	y2 = 255 * sin(predkosc * C1 - 2);
-	y3 = 255 * sin(predkosc * C1 - 3);
-	y4 = 255 * sin(predkosc * C1 - 4);
-	y5 = 255 * sin(predkosc * C1 - 5);
+	poziom = map(analogRead(pot), 0, 1023, 0, 255);
+
+	y = poziom * sin(predkosc * C1);
+	y1 = poziom * sin(predkosc * C1 - 1);
+	y2 = poziom * sin(predkosc * C1 - 2);
+	y3 = poziom * sin(predkosc * C1 - 3);
+	y4 = poziom * sin(predkosc * C1 - 4);
+	y5 = poziom * sin(predkosc * C1 - 5);
 	if (y < 0)
 	{
 		y = 0;
@@ -82,7 +87,7 @@ void blinksin()
 		y5 = 0;
 	}
 
-	Serial.println(y);
+	Serial.println(poziom);
 	analogWrite(led1, y);
 	analogWrite(led2, y1);
 	analogWrite(led3, y2);
