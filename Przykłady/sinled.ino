@@ -69,9 +69,9 @@ void blinksin()
 	y = poziom * sin(predkosc * C1);
 	y1 = poziom * sin(predkosc * C1 - 1);
 	y2 = poziom * sin(predkosc * C1 - 2);
-	y3 = poziom * sin(predkosc * C1 - 3);
-	y4 = poziom * sin(predkosc * C1 - 4);
-	y5 = poziom * sin(predkosc * C1 - 5);
+	y3 = poziom * sin(predkosc * C1 - 2);
+	y4 = poziom * sin(predkosc * C1 - 1);
+	y5 = poziom * sin(predkosc * C1 );
 	if (y < 0)
 	{
 		y = 0;
@@ -105,6 +105,303 @@ void blinksin()
 	analogWrite(led5, y4);
 	analogWrite(led6, y5);
 }
+void blink1()
+{
+
+	y = poziom * sin(predkosc * C1 - 2);
+	y1 = poziom * sin(predkosc * C1 - 1);
+	y2 = poziom * sin(predkosc * C1);
+	y3 = poziom * sin(predkosc * C1);
+	y4 = poziom * sin(predkosc * C1 - 1);
+	y5 = poziom * sin(predkosc * C1 - 2);
+	if (y < 0)
+	{
+		y = 0;
+	}
+	if (y1 < 0)
+	{
+		y1 = 0;
+	}
+	if (y2 < 0)
+	{
+		y2 = 0;
+	}
+	if (y3 < 0)
+	{
+		y3 = 0;
+	}
+	if (y4 < 0)
+	{
+		y4 = 0;
+	}
+	if (y5 < 0)
+	{
+		y5 = 0;
+	}
+
+
+	analogWrite(led1, y);
+	analogWrite(led2, y1);
+	analogWrite(led3, y2);
+	analogWrite(led4, y3);
+	analogWrite(led5, y4);
+	analogWrite(led6, y5);
+}
+void blink2()
+{
+
+	y = poziom * sin(predkosc * C1);
+	y1 = poziom * sin(predkosc * C1 - 1);
+	y2 = poziom * sin(predkosc * C1 - 2);
+	y3 = poziom * sin(predkosc * C1 - 3);
+	y4 = poziom * sin(predkosc * C1 - 4);
+	y5 = poziom * sin(predkosc * C1 - 5);
+	if (y < 0)
+	{
+		y = 0;
+	}
+	if (y1 < 0)
+	{
+		y1 = 0;
+	}
+	if (y2 < 0)
+	{
+		y2 = 0;
+	}
+	if (y3 < 0)
+	{
+		y3 = 0;
+	}
+	if (y4 < 0)
+	{
+		y4 = 0;
+	}
+	if (y5 < 0)
+	{
+		y5 = 0;
+	}
+
+
+	analogWrite(led1, y);
+	analogWrite(led2, y1);
+	analogWrite(led3, y2);
+	analogWrite(led4, y3);
+	analogWrite(led5, y4);
+	analogWrite(led6, y5);
+}
+void blink3()
+{
+
+	y = poziom * sin(predkosc * C1);
+	y1 = poziom * sin(predkosc * C1 - 3);
+	y2 = poziom * sin(predkosc * C1 - 5);
+	y3 = poziom * sin(predkosc * C1 - 7);
+	y4 = poziom * sin(predkosc * C1 - 9);
+	y5 = poziom * sin(predkosc * C1 - 12);
+	if (y < 0)
+	{
+		y = 0;
+	}
+	if (y1 < 0)
+	{
+		y1 = 0;
+	}
+	if (y2 < 0)
+	{
+		y2 = 0;
+	}
+	if (y3 < 0)
+	{
+		y3 = 0;
+	}
+	if (y4 < 0)
+	{
+		y4 = 0;
+	}
+	if (y5 < 0)
+	{
+		y5 = 0;
+	}
+
+
+	analogWrite(led1, y);
+	analogWrite(led2, y1);
+	analogWrite(led3, y2);
+	analogWrite(led4, y3);
+	analogWrite(led5, y4);
+	analogWrite(led6, y5);
+}
+void blink4()
+{
+
+	y = poziom * sin(predkosc * C1);
+	y1 = poziom * sin(predkosc * C1 - 2);
+	y2 = poziom * sin(predkosc * C1 - 4);
+	y3 = poziom * sin(predkosc * C1 - 6);
+	y4 = poziom * sin(predkosc * C1 - 8);
+	y5 = poziom * sin(predkosc * C1 - 10);
+	if (y < 0)
+	{
+		y = 0;
+	}
+	if (y1 < 0)
+	{
+		y1 = 0;
+	}
+	if (y2 < 0)
+	{
+		y2 = 0;
+	}
+	if (y3 < 0)
+	{
+		y3 = 0;
+	}
+	if (y4 < 0)
+	{
+		y4 = 0;
+	}
+	if (y5 < 0)
+	{
+		y5 = 0;
+	}
+
+
+	analogWrite(led1, y);
+	analogWrite(led2, y1);
+	analogWrite(led3, y2);
+	analogWrite(led4, y3);
+	analogWrite(led5, y4);
+	analogWrite(led6, y5);
+}
+void blink5()
+{
+
+	y = poziom * sin(predkosc * C1);
+	y1 = poziom * sin(predkosc * C1);
+	y2 = poziom * sin(predkosc * C1);
+	y3 = poziom * sin(predkosc * C1);
+	y4 = poziom * sin(predkosc * C1);
+	y5 = poziom * sin(predkosc * C1);
+	if (y < 0)
+	{
+		y = 0;
+	}
+	if (y1 < 0)
+	{
+		y1 = 0;
+	}
+	if (y2 < 0)
+	{
+		y2 = 0;
+	}
+	if (y3 < 0)
+	{
+		y3 = 0;
+	}
+	if (y4 < 0)
+	{
+		y4 = 0;
+	}
+	if (y5 < 0)
+	{
+		y5 = 0;
+	}
+
+
+	analogWrite(led1, y);
+	analogWrite(led2, y1);
+	analogWrite(led3, y2);
+	analogWrite(led4, y3);
+	analogWrite(led5, y4);
+	analogWrite(led6, y5);
+}
+void blink6()
+{
+
+	y = poziom * sin(predkosc * 0.01 * C1 * C1);
+	y1 = poziom * sin(predkosc * 0.01 * C1 * C1 - 1);
+	y2 = poziom * sin(predkosc * 0.01 * C1 * C1 - 2);
+	y3 = poziom * sin(predkosc * 0.01 * C1 * C1 - 3);
+	y4 = poziom * sin(predkosc * 0.01 * C1 * C1 - 4);
+	y5 = poziom * sin(predkosc * 0.01 * C1 * C1 - 5);
+	if (y < 0)
+	{
+		y = 0;
+	}
+	if (y1 < 0)
+	{
+		y1 = 0;
+	}
+	if (y2 < 0)
+	{
+		y2 = 0;
+	}
+	if (y3 < 0)
+	{
+		y3 = 0;
+	}
+	if (y4 < 0)
+	{
+		y4 = 0;
+	}
+	if (y5 < 0)
+	{
+		y5 = 0;
+	}
+
+
+	analogWrite(led1, y);
+	analogWrite(led2, y1);
+	analogWrite(led3, y2);
+	analogWrite(led4, y3);
+	analogWrite(led5, y4);
+	analogWrite(led6, y5);
+}
+void blink7()
+{
+
+	y = poziom * sin(predkosc * 0.0001 * C1 * C1 * C1);
+	y1 = poziom * sin(predkosc * 0.0001 * C1 * C1 * C1 - 1);
+	y2 = poziom * sin(predkosc * 0.0001 * C1 * C1 * C1 - 2);
+	y3 = poziom * sin(predkosc * 0.0001 * C1 * C1 * C1 - 3);
+	y4 = poziom * sin(predkosc * 0.0001 * C1 * C1 * C1 - 4);
+	y5 = poziom * sin(predkosc * 0.0001 * C1 * C1 * C1 - 5);
+	if (y < 0)
+	{
+		y = 0;
+	}
+	if (y1 < 0)
+	{
+		y1 = 0;
+	}
+	if (y2 < 0)
+	{
+		y2 = 0;
+	}
+	if (y3 < 0)
+	{
+		y3 = 0;
+	}
+	if (y4 < 0)
+	{
+		y4 = 0;
+	}
+	if (y5 < 0)
+	{
+		y5 = 0;
+	}
+
+
+	analogWrite(led1, y);
+	analogWrite(led2, y1);
+	analogWrite(led3, y2);
+	analogWrite(led4, y3);
+	analogWrite(led5, y4);
+	analogWrite(led6, y5);
+}
+
+
+
 
 void stan()
 {
@@ -129,7 +426,7 @@ void predkoscled()
 		czas3 = czas;
 		if (C2 == 0)
 		{
-			predkosc = (analogRead(pot) / 1023.000) * 0.500;
+			predkosc = (analogRead(pot) / 1023.000) * 0.5;
 		}
 	}
 	
@@ -150,10 +447,14 @@ void loop()
 		Serial.print("Kanal: ");
 		Serial.print(C2);
 		Serial.println();
+		Serial.print("Wartosc: ");
+		Serial.print(y);
+		Serial.println();
 	}
 
 
 	sinT();
 	predkoscled();
-	blinksin();
+	blink7();
+
 }
