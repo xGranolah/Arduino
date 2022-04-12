@@ -9,11 +9,12 @@ int led4 = 6;
 int led5 = 5;
 int led6 = 3;
 
-int S1 = A4;
-int pot = A5;
+int S1 = A4; // przycisk
+int pot = A5; // potencjometr 10-200k
 
 int C1 = 0;
 int C2 = 0;
+int tryb = 0;
 int y = 0;
 int y1 = 0;
 int y2 = 0;
@@ -21,15 +22,19 @@ int y3 = 0;
 int y4 = 0;
 int y5 = 0;
 
-float predkosc = 0.02;
+
+float predkosc = 0.00;
 int poziom = 255; //poziom światła max 255
 
 unsigned long czas = 0;
 unsigned long czas1 = 0;
 unsigned long czas2 = 0;
 unsigned long czas3 = 0;
-int T1 = 10;
+unsigned long czas4 = 0;
+unsigned long czas5 = 0;
+int T1 = 5;
 int T2 = 150;
+int T3 = 150;
 
 
 void setup()
@@ -405,15 +410,21 @@ void blink7()
 
 void stan()
 {
-	if (digitalRead(S1) == HIGH)
+
+	if (czas - czas4 >= T3)
 	{
-		C2++;
+		if (digitalRead(S1) == HIGH)
+		{
+			C2++;
+		}
+		czas4 = czas;
+
 	}
 }
 
-void predkoscled()
+void menu()
 {
-	if (C2 >= 3)
+	if (C2 >= 4)
 	{
 		C2 = 0;
 	}
@@ -421,13 +432,18 @@ void predkoscled()
 	{
 		poziom = map(analogRead(pot), 0, 1023, 0, 255);
 	}
+	if (C2 == 2)
+	{
+		tryb = map(analogRead(pot), 0, 1023, 0, 8);
+	}
 	if (czas - czas3 >= 150)
 	{
 		czas3 = czas;
 		if (C2 == 0)
 		{
-			predkosc = (analogRead(pot) / 1023.000) * 0.5;
+			predkosc = map(analogRead(pot), 0, 1023, 0, 10) * 0.01;
 		}
+		
 	}
 	
 }
@@ -450,11 +466,52 @@ void loop()
 		Serial.print("Wartosc: ");
 		Serial.print(y);
 		Serial.println();
+		Serial.print("Tryb: ");
+		Serial.print(tryb);
+		Serial.println();
 	}
 
 
 	sinT();
-	predkoscled();
-	blink7();
+	menu();
+	if (tryb == 1)
+	{
+		blinksin();
+	}
+	if (tryb == 2)
+	{
+		blink1();
+	}
+	if (tryb == 3)
+	{
+		blink2();
+	}
+	if (tryb == 4)
+	{
+		blink3();
+	}
+	if (tryb == 5)
+	{
+		blink4();
+	}
+	if (tryb == 6)
+	{
+		blink5();
+	}
+	if (tryb == 7)
+	{
+		blink6();
+	}
+	if (tryb == 8)
+	{
+		blink7();
+	}
+	if (tryb == 0)
+	{
+		
+	}
+
+	
+
 
 }
